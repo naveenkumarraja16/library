@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>login form design</title>
+    <link rel="stylesheet" type="text/css" href="createaccountcss.css">
+    <script type="text/javascript">
+    function passwordcheck()
+        {
+            var a=document.getElementById("password");
+            var b=document.getElementById("repassword");
+               while(a!=b)
+                   alert("password and re-password are incorrect");
+        }
+        
+        
+    </script>
+    <body>
+        <header>
+            <div>
+    <ul>
+        <li><a href="mainpage.html">HOME</a></li>
+        <li><a href="loginpage.html">LOGIN</a></li>
+        <li><a href="librarycard.html">LIBRARY CARD</a></li>
+        <li><a href="adminlogin.php">ADMIN</a></li>
+        <li><a href="contactpage.html">CONTACT</a></li>
+    </ul>
+    </div>
+        <div class="loginbox">
+            <h1> CREATE AN ACCOUNT</h1>
+            <form method="post" onclick="passwordcheck()" action="createaccountexamine.php">
+            <p>ENTER NAME</p>
+                <input type="text" name="uname" placeholder="enter username" autocomplete="off" required>
+                <p> DATE OF BIRTH</p>
+                <input type="date" name="dateofbirth" placeholder="enter age" autocomplete="off" required>
+                <p>ENTER E-MAIL ID </p>
+                <input type="email" name="emailid" placeholder="enter email-id" autocomplete="off" required>
+                <p>ENTER MOBILE NUMBER </p>
+                <input type="text" name="mobilenumber" maxlenght="10" placeholder="enter mobile number" autocomplete="off" required>
+                <p>ENTER PASSWORD</p>
+                <input type="password" name="password" placeholder="enter password" autocomplete="off" required>
+                <p>ENTER CONFIRM PASSWORD</p>
+                <input type="password" name="repassword" placeholder="enter confirm password" autocomplete="off" required onmouseout="passwordcheck();">
+                <p>ENTER CAPTCHA</p>
+                <input type="text" name="captcha" placeholder="enter captcha" autocomplete="off" required>
+                <img src="captacha.php">
+                <input type="submit" name="" value="CREATE AN ACCOUNT"><br/>
+                <a href="loginpage.html">LOGIN</a><br/>
+            </form >
+        </div>
+        </header>
+    </body>
+</head>
+</html>
